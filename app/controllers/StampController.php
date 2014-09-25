@@ -25,8 +25,11 @@ class StampController extends \BaseController {
 
 			// Initialise the API client
 			$client = new SSSApiClient($appKey, $appSecret);
-			$stampResponse = $client->processData($data);
-			echo $stampResponse;
+			$stampResponseString = $client->processData($data);
+			
+			// Because for some reason it is returned as a string
+			$stampResponse = json_decode($stampResponseString);
+
 		// stampResponse now contains the JSON data from the stamp request
 		// Parse the stampResponse for the id of the stamp and do something based off that data
 		if ( array_key_exists('stamp', $stampResponse) ){
