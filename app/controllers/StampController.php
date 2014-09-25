@@ -39,21 +39,24 @@ class StampController extends \BaseController {
 			$stampSecure = $stampResponse['secure'];
 			$stampCreated = $stampResponse['created'];
 
-			echo $stampId;
+			
+			// For demo purposes
+			$userId = 1;
+
+			// Insert the data into the database
+			DB::table('stamp_transactions')->insert([
+			            			'user_id' => $userId,
+			                        'serial' => $stampId,
+			                        'receipt' => $stampReceipt,
+			                        'secure' => $stampSecure,
+			                        'created_response' => $stampCreated
+			                    ]); 
+
+			echo "Successfully entered the data into the database";
 		}
 		
 
-		// For demo purposes
-		$userId = 1;
-
-			// Insert the data into the database
-			/* DB::table('stamp_transactions')->insert([
-			                                        'user_id' => $userId,
-			                                        'serial' => $stampId,
-			                                        'receipt' => $stampReceipt,
-			                                        'secure' => $stampSecure,
-			                                        'created_response' => $stampCreated
-			                                        ]); */
+			
 
 	}
 
