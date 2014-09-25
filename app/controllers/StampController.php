@@ -26,33 +26,46 @@ class StampController extends \BaseController {
 			// Initialise the API client
 			$client = new SSSApiClient($appKey, $appSecret);
 			$stampResponseString = $client->processData($data);
-			
+
 			// Because for some reason it is returned as a string
 			$stampResponse = json_decode($stampResponseString, true);
-
-		// stampResponse now contains the JSON data from the stamp request
-		// Parse the stampResponse for the id of the stamp and do something based off that data
+		
+		// If it is a valid response do something with the data
 		if ( array_key_exists('stamp', $stampResponse) ){
+
 			// Store all the stamp response data
 			$stampId = $stampResponse['stamp']['serial'];
 			$stampReceipt = $stampResponse['receipt'];
 			$stampSecure = $stampResponse['secure'];
 			$stampCreated = $stampResponse['created'];
 
-			
-			// For demo purposes
-			$userId = 1;
+			// Check if this stamp exsists, if not give add it if there are proper permissions
+			$stampExists = DB::table('stamp_users')->where('stamp_id', $stampId)->first();
+			if ( ! is_null($stampExists) ){
 
-			// Insert the data into the database
-			DB::table('stamp_transactions')->insert([
-			            			'user_id' => $userId,
-			                        'serial' => $stampId,
-			                        'receipt' => $stampReceipt,
-			                        'secure' => $stampSecure,
-			                        'created_response' => $stampCreated
-			                    ]); 
+				// The stamp exists, add the instance to the transactions database
+				DB::table('stamp_transactions')->insert([
+				           			'user_id' => $stampExists->user_id,
+				                    'serial' => $stampId,
+				                    'receipt' => $stampReceipt,
+				                    'secure' => $stampSecure,
+				                    'created_response' => $stampCreated
+				                ]); 
 
-			echo "Successfully entered the data into the database";
+			} else {
+				// The stamp does not yet exist yet
+				// Check if the user has the correct permissions and if so add the stamp to their account
+				echo $stampId;
+
+			}
+
+					
+
+
+		} else {
+
+			return View::make('stamp.error');
+
 		}
 		
 

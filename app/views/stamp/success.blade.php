@@ -1,0 +1,1 @@
+Everything went good ! Successfully stamped !
