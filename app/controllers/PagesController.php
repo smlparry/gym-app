@@ -11,7 +11,7 @@ class PagesController extends BaseController {
 		}
 		
 		// Else redirect to index page
-		return View::make('index');
+		return Redirect::to('/s/');
 
 
 	}
