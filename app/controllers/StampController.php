@@ -26,25 +26,31 @@ class StampController extends \BaseController {
 			// Initialise the API client
 			$client = new SSSApiClient($appKey, $appSecret);
 			$stampResponse = $client->processData($data);
-			
+			echo $stampResponse;
 		// stampResponse now contains the JSON data from the stamp request
 		// Parse the stampResponse for the id of the stamp and do something based off that data
-		$stampId = $stampResponse['stamp']['serial'];
-		$stampReceipt = $stampResponse['receipt'];
-		$stampSecure = $stampResponse['secure'];
-		$stampCreated = $stampResponse['created'];
+		if ( array_key_exists('stamp', $stampResponse) ){
+			// Store all the stamp response data
+			$stampId = $stampResponse['stamp']['serial'];
+			$stampReceipt = $stampResponse['receipt'];
+			$stampSecure = $stampResponse['secure'];
+			$stampCreated = $stampResponse['created'];
+
+			echo $stampId;
+		}
+		
 
 		// For demo purposes
 		$userId = 1;
 
 			// Insert the data into the database
-			DB::table('stamp_transactions')->insert([
+			/* DB::table('stamp_transactions')->insert([
 			                                        'user_id' => $userId,
 			                                        'serial' => $stampId,
 			                                        'receipt' => $stampReceipt,
 			                                        'secure' => $stampSecure,
 			                                        'created_response' => $stampCreated
-			                                        ]);
+			                                        ]); */
 
 	}
 

@@ -18,5 +18,5 @@ Route::get('s/', 'StampController@stampScreen');
 Route::post('s/callback', 'StampController@callback');
 Route::post('s/error', 'StampController@error');
 
-// o
+
 
