@@ -2,6 +2,7 @@
 
 // Routes File
 Route::get('/', 'PagesController@index');
+Route::get('/style', 'PagesController@style');
 
 // Sessions Controller controls an existing user logging in and out
 Route::get('login', 'SessionsController@create');

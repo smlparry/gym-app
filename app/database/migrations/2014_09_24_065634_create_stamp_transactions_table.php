@@ -15,8 +15,9 @@ class CreateStampTransactionsTable extends Migration {
 		Schema::create('stamp_transactions', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->integer('stamp_user_id');
 			$table->integer('user_id');
-			$table->string('serial');
+			$table->string('stamp_id');
 			$table->string('receipt');
 			$table->string('secure');
 			$table->string('created_response');

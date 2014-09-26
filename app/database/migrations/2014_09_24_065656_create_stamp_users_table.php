@@ -15,7 +15,7 @@ class CreateStampUsersTable extends Migration {
 		Schema::create('stamp_users', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('user_id');
+			$table->integer('stamp_user_id');
 			$table->string('stamp_id');
 			$table->timestamps();
 		});

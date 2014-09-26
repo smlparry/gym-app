@@ -149,6 +149,7 @@
 
 }
 
+
 .login-header {
 
 	text-align: center;
@@ -213,5 +214,66 @@
 
 }
 
+.callback-logo {
 
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 10%;
+
+}
+
+
+.callback-wrapper {
+
+	max-width: 600px;
+	margin: 0 auto;
+	margin-top: 40px;
+	padding: 40px;
+	padding-top: 25px;
+	background-color: #fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+
+}
+
+.callback-wrapper h3 {
+
+	font-size: 25px;
+	vertical-align: middle;
+	line-height: 33px;
+
+}
+
+.btn-callback {
+
+	background-color: #fff;
+	padding: 20px;
+	color: #626c72;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0),0 2px 0 #dadada;
+	-moz-box-shadow: 0 1px 0 rgba(0,0,0,0),0 2px 0 #dadada;
+	-ms-box-shadow: 0 1px 0 rgba(0,0,0,0),0 2px 0 #dadada;
+	-o-box-shadow: 0 1px 0 rgba(0,0,0,0),0 2px 0 #dadada;
+	box-shadow: 0 1px 0 rgba(0,0,0,0),0 2px 0 #dadada;
+
+
+}
+
+.callback-button {
+
+	text-align: center;
+	margin-top: 30px;
+
+}
+
+.btn-callback:hover {
+
+	background-color: #f1f1f1;
+	color: #626c72;;
+
+}
 

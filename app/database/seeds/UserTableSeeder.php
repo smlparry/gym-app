@@ -14,7 +14,17 @@ class UserTableSeeder extends Seeder {
                 // add user using Eloquent
                 $user = new User;
                 $user->email = 'admin@localhost';
-                $user->password = Hash::make('password');
+                $user->password = Hash::make('123');
+                $user->group_id = 2;
+                $user->name = 'Example Name';
+                $user->gym = 'Crossfit Geelong';
+                $user->save();
+
+                $user = new User;
+                $user->email = 'samuel@zaprri.com';
+                $user->password = Hash::make('123');
+                $user->group_id = 1;
+                $user->name = 'Samuel Parry';
                 $user->save();
 
 	}

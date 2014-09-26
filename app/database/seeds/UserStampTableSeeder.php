@@ -14,7 +14,7 @@ class UserStampTableSeeder extends Seeder {
 
         // Add the seeded records
 		DB::table('stamp_users')->insert([
-					            'user_id' => 1,
+					            'stamp_user_id' => 1,
 					            'stamp_id' => "DEV-STAMP-B"
 					        ]); 
 
