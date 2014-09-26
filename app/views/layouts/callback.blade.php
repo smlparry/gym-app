@@ -1,14 +1,12 @@
-
-
 <!doctype html>
 <html>
 <head>
 	<title>
 		@yield('title')
 	</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/custom-styles.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/custom-styles.css">
 </head>
 <body style="background:#ff775a">
 
