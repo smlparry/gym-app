@@ -6,8 +6,11 @@ class PagesController extends BaseController {
 
 		if ( Auth::check() )
 		{
-			// Redirect to dash
-			return View::make('logged_in.dash');
+			// Get the stamp transactions
+			$history = DB::table('stamp_transactions')->where('stamp_user_id', Auth::id())->get();
+
+				// Redirect to dash with the history object
+				return View::make('logged_in.dash', ['history' => $history]);
 		}
 		
 		// Else redirect to index page

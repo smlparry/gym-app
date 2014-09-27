@@ -9,6 +9,9 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/custom-styles.css">
+
+	<!-- Fonts -->
+	<link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -37,8 +40,12 @@
 	            </div>
 	       	@endif
 
-			<!-- Content -->
-			@yield('content')
+	       	<div class="content">
+		       	<!-- Sidebar -->
+		       	@yield('sidebar')
+				<!-- Content -->
+				@yield('content')
+			</div>
 
 	</div>
 	

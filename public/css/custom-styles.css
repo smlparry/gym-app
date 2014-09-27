@@ -2,122 +2,9 @@
    Insert Your Custom Styles Below. All styles located in this file will
    override existing main.css stylesheets.
    ========================================================================== */ 
+.content {
 
-.edit {
-
-	background-color: #F1F1F1;
-	font-family: "Ubuntu";
-
-}
-
-
-
-#content {
-
-	padding-top: 20px;
-	max-width: 1400px;
-	margin: 0 auto;
-
-}
-
-
-#sidebar {
-
-  font-family: "Ubuntu";
-  color: #636363;
-
-}
-
- #sidebar, .nav-pills,  li.active, a {
-
-  color: #ff755a;
-
-
-}
-
-#edit-content {
-
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
-	border: 1px solid #888888;
-	background-color: #EBEBEB;
-	padding: 25px;
-	margin-bottom: 40px;
-	box-shadow: inset 1px 0 5px #888888;
-
-}
-
-.form-legend {
-	text-align: center;
-	font-size: 27px;
-	color: #7D7D7D;
-	padding-bottom: 20px;
-}
-
-.current-image {
-
-	max-height: 250px;
-	margin-bottom: 10px;
-
-}
-
-.show-current-image {
-
-	color: #7D7D7D;
-	font-weight: 400;
-
-}
-
-#success-message {
-
-	background-color: #ff755a;
-	font-family: "Raleway";
-
-}
-
-.success-message {
-
-	left: 0;
-    margin: auto;
-    margin-top: -100px;
-    position: absolute;
-    text-align: center;
-    top: 40%;
-    width: 100%;
-
-}
-
-.success-message .success-heading {
-
-	font-size: 50px;
-	color: #fff;
-	padding-top: 40px;
-	font-weight: 300;
-
-}
-
-.success-message .success-subheading {
-
-	font-size: 26px;
-	color: #fff;
 	padding-top: 30px;
-	font-weight: 300;
-
-}
-
-.error-retry {
-
-	text-decoration: none;
-	color: #9E1A00;
-	font-weight: 300;
-	font-size: 26px;
-
-}
-
-.error-retry:hover {
-
-	color: #fff;
 
 }
 
@@ -277,3 +164,43 @@
 
 }
 
+.dash-sidebar li {
+
+	color: #ff755a;
+
+}
+
+.dash-sidebar li a {
+
+	color: #ff755a;
+
+}
+
+.dash-sidebar li a:hover {
+
+	color: #FF5736;
+	background-color: #f1f1f1;
+
+}
+
+.dash-sidebar li.active a {
+
+	background-color: #ff775a;
+	color: #f1f1f1;
+
+
+}
+
+.dash-sidebar li.active a:hover {
+
+	background-color: #FF5736;
+
+}
+
+.dashboard-item {
+
+	padding: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+
+}
