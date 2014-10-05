@@ -18,7 +18,7 @@
 		@foreach ( $history as $historyItem )
 			<div class="box-wrap" style="margin-bottom:15px">
 				<div class="dashboard-item">
-					{{ $historyItem->user_id }} <span class="pull-right">{{ $historyItem->created_response }}</span>
+					{{ $historyItem->user_name }} <span class="pull-right">{{ $historyItem->created_response }}</span>
 				</div>
 			</div>
 		@endforeach 
