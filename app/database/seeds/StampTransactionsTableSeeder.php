@@ -16,6 +16,7 @@ class StampTransactionsTableSeeder extends Seeder {
 		DB::table('stamp_transactions')->insert([
 		                          'stamp_user_id' => 1,
 		                          'user_id' => 2,
+		                          'user_name' => 'Samuel Parry',
 		                          'stamp_id' => 'DEV-STAMP-B',
 		                          'receipt' => 'Example Receipt',
 		                          'secure' => 'false'

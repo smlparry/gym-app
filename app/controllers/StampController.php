@@ -50,6 +50,7 @@ class StampController extends \BaseController {
 					DB::table('stamp_transactions')->insert([
 					                    'stamp_user_id' => $stampExists->stamp_user_id,
 					           			'user_id' => Auth::id(),
+					           			'user_name' => Auth::user()->name;
 					                    'stamp_id' => $stampId,
 					                    'receipt' => $stampReceipt,
 					                    'secure' => $stampSecure,

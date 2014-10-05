@@ -17,6 +17,7 @@ class CreateStampTransactionsTable extends Migration {
 			$table->increments('id');
 			$table->integer('stamp_user_id');
 			$table->integer('user_id');
+			$table->string('user_name');
 			$table->string('stamp_id');
 			$table->string('receipt');
 			$table->string('secure');
