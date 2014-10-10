@@ -3,12 +3,7 @@
 
 @section('sidebar')
 		
-	<div class="col-sm-4">
-		<ul class="nav nav-pills nav-stacked dash-sidebar">
-			<li class="active"><a href="#">Dashboard <span class="pull-right"><i class="fa fa-chevron-right"></i></span></a></li>
-			<li><a href="#">Add New Stamp<span class="pull-right"><i class="fa fa-plus"></i></span></a></li>
-		</ul>
-	</div>
+	@include('sub_views.sidebar')
 
 @stop
 

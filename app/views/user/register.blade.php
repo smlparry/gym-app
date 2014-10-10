@@ -15,7 +15,7 @@
 			<h3>Register</h3>
 		</div>
 
-		{{ Form::open( array('url' => 'register', 'class' => 'form-horizontal') ) }}
+		{{ Form::open( array('route' => 'user.store', 'class' => 'form-horizontal') ) }}
 
 			<!-- Name -->
 			<div class="control-group {{{ $errors->has('email') ? 'error' : '' }}}">

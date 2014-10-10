@@ -4,11 +4,12 @@
 	<title>
 		@yield('title')
 	</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/custom-styles.css">
+	
+	{{ HTML::style('css/bootstrap.css') }}
+	{{ HTML::style('css/main.css') }}
+	{{ HTML::style('css/font-awesome.css') }}
+	{{ HTML::style('css/animate.css') }}
+	{{ HTML::style('css/custom-styles.css') }}
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -27,16 +28,12 @@
 	                <h4>Success</h4>
 	                {{{ $message }}}
 	            </div>
-	        @elseif ( $errorMessages = Session::get('error') )
+	        @elseif ( $error = Session::get('error') )
 	        	<!-- Error Messages -->
 	            <div class="alert alert-danger alert-block">
 	                <button type="button" class="close" data-dismiss="alert">&times;</button>
 	                <h4>Error</h4>
-
-	                @foreach ( $errorMessages as $message )
-	                	{{{ $message }}}
-	                @endforeach
-
+	                {{{ $error }}}
 	            </div>
 	       	@endif
 

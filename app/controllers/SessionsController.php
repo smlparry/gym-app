@@ -10,8 +10,14 @@ class SessionsController extends \BaseController {
 	public function index()
 	{
 
-		// This controller is only for functionality
-		return Redirect::to('/');
+		// Check if already logged in
+		if ( Auth::check() ){
+			// Redirect Logged in user
+			return User::loggedInRedirect('/');
+		}
+
+		// If they are not already logged in show the login page.
+		return View::make("user.login");
 		
 	}
 
@@ -23,15 +29,8 @@ class SessionsController extends \BaseController {
 	 */
 	public function create()
 	{
-
-		// Check if already logged in
-		if ( Auth::check() ){
-			// Redirect Logged in user
-			return User::loggedInRedirect('/');
-		}
-
-		// If they are not already logged in show the login page.
-		return View::make("user.login");
+		//
+	
 
 	}
 

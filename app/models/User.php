@@ -35,4 +35,24 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	}
 
+	public static function permissionDenied($redirectPage)
+	{
+
+		// User is already logged in
+		return Redirect::to($redirectPage)->with('error', 'You do not have sufficient privilages to perform this action');
+
+	}
+
+	public static function isAdmin()
+	{
+
+		// Check if the user has admin privilages
+		if ( Auth::check() ){
+			if ( Auth::user()->group_id == 2 ){
+				return true;
+			}
+		}
+		return false;
+	}
+
 }

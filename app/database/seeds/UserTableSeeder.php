@@ -24,6 +24,7 @@ class UserTableSeeder extends Seeder {
                 $user->email = 'samuel@zaprri.com';
                 $user->password = Hash::make('123');
                 $user->group_id = 1;
+                $user->parent_id = 1;
                 $user->name = 'Samuel Parry';
                 $user->save();
 
@@ -31,6 +32,7 @@ class UserTableSeeder extends Seeder {
                 $user->email = 'samuel@example.com';
                 $user->password = Hash::make('123');
                 $user->group_id = 1;
+                $user->parent_id = 1;
                 $user->name = 'Karen Parry';
                 $user->save();
 

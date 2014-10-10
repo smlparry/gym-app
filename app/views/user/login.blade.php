@@ -15,7 +15,7 @@
 			<h3>Login</h3>
 		</div>
 
-		{{ Form::open( array('url' => 'sessions', 'class' => 'form-horizontal') ) }}
+		{{ Form::open( array('route' => 'login.store', 'class' => 'form-horizontal') ) }}
 
 			<!-- Name -->
 			<div class="control-group {{{ $errors->has('email') ? 'error' : '' }}}">
@@ -57,7 +57,7 @@
 	</div>
 
 	<div class="login-options">
-		{{ link_to_action('UsersController@forgotPassword', 'Forgot Password?') }}
+		{{ link_to_action('UserController@forgotPassword', 'Forgot Password?') }}
 		| 
 		{{ link_to('register', 'Sign Up') }}
 	</div>

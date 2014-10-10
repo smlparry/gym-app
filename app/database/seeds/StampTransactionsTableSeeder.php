@@ -21,6 +21,15 @@ class StampTransactionsTableSeeder extends Seeder {
 		                          'receipt' => 'Example Receipt',
 		                          'secure' => 'false'
 					        ]); 
+		 // Add the seeded records
+		DB::table('stamp_transactions')->insert([
+		                          'stamp_user_id' => 1,
+		                          'user_id' => 3,
+		                          'user_name' => 'Karen Parry',
+		                          'stamp_id' => 'DEV-STAMP-B',
+		                          'receipt' => 'Example Receipt',
+		                          'secure' => 'false'
+					        ]); 
 
 	}
 
