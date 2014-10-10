@@ -26,6 +26,8 @@ class UserTableSeeder extends Seeder {
                 $user->group_id = 1;
                 $user->parent_id = 1;
                 $user->name = 'Samuel Parry';
+                $user->address = 'This address';
+                $user->DOB = '14/02/1996';
                 $user->save();
 
                 $user = new User;
@@ -34,6 +36,8 @@ class UserTableSeeder extends Seeder {
                 $user->group_id = 1;
                 $user->parent_id = 1;
                 $user->name = 'Karen Parry';
+                $user->address = 'This address';
+                $user->DOB = '14/02/1996';
                 $user->save();
 
 	}

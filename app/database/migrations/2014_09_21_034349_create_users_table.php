@@ -22,6 +22,8 @@ class CreateUsersTable extends Migration {
 			$table->integer('parent_id')->nullable();
 			$table->string('name')->nullable();
 			$table->string('gym')->nullable();
+			$table->string('address')->nullable();
+			$table->string('DOB')->nullable();
 			$table->timestamps();
 		});
 	}
