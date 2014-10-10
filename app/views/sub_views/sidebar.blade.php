@@ -5,9 +5,12 @@
 					Dashboard <span class="pull-right"><i class="fa fa-chevron-right"></i></span>
 				</a>
 			</li>
-			<li {{ Request::is('/users/*') ? 'class="active"' : '' }}>
-				<a href="/users">
-					Users <span class="pull-right"><i class="fa fa-chevron-right"></i></span>
+			<li {{ Request::is('*users') ? 'class="active"' : '' }}>
+				{{ HTML::decode(
+					HTML::linkRoute('users.index', 'Users <span class="pull-right"><i class="fa fa-chevron-right"></i></span>')
+					)
+				}}
+					
 				</a>
 			</li>
 			<li>

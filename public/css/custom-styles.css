@@ -204,3 +204,20 @@
 	padding-right: 30px;
 
 }
+
+h1.dashboard-heading {
+	font-size: 25px;
+	color: #7D7D7D;
+	text-align: center;
+	margin-bottom: 20px;
+
+}
+
+.dashboard-item table {
+	margin-bottom: 0px;
+}
+
+a:hover .box-wrap{
+	background: #F7F7F7;
+	color: #000;
+}

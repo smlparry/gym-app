@@ -29,7 +29,7 @@ class UserTableSeeder extends Seeder {
                 $user->save();
 
                 $user = new User;
-                $user->email = 'samuel@example.com';
+                $user->email = 'karen@zaprri.com';
                 $user->password = Hash::make('123');
                 $user->group_id = 1;
                 $user->parent_id = 1;

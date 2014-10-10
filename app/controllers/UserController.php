@@ -11,9 +11,14 @@ class UserController extends \BaseController {
 	{
 
 		// Show all the contected users
-		$allUsers = Admin::showUsers();
-		return View::make("logged_in.users", ['dashboardObject' => $allUsers] );
+		$admin = new Admin;
+		$allUsers = $admin->showUsers();
 
+		if ( $allUsers != "permission_denied" ){
+			return View::make("logged_in.users", ['dashboardObject' => $allUsers] );
+		}
+
+		return User::permissionDenied('/');
 
 	}
 
@@ -97,7 +102,18 @@ class UserController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		// Show the details of the item
+		$admin = new Admin;
+		$userData = $admin->specificUser($id);
+
+		if ( $userData != "permission_denied" ){
+			return View::make('logged_in.user_specific', 
+			                  ['specificUser' => $userData['userDetails'],
+			                   'userHistory' => $userData['userHistory'] 
+			                   ]);
+		}
+
+		return User::permissionDenied('/');
 	}
 
 

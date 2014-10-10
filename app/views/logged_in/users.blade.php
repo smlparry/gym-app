@@ -3,12 +3,23 @@
 
 @section('sidebar')
 
-	@inlude('sub_views.sidebar')
+	@include('sub_views.sidebar')
 
 @stop
 
 @section('content')
 	
-	<h1> This is where this gyms users go</h1>
+	<div class="col-sm-8">
+		@foreach ( $dashboardObject as $dashboardItem )
+			<a href="/users/{{ $dashboardItem->id }}">
+				<div class="box-wrap" style="margin-bottom:15px">
+					<div class="dashboard-item">
+						{{ $dashboardItem->name }} <span class="pull-right">{{ $dashboardItem->email }}</span>
+					</div>
+				</div>
+			</a>
+		@endforeach 
+
+	</div>
 
 @stop

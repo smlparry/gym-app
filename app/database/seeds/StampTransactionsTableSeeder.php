@@ -19,7 +19,8 @@ class StampTransactionsTableSeeder extends Seeder {
 		                          'user_name' => 'Samuel Parry',
 		                          'stamp_id' => 'DEV-STAMP-B',
 		                          'receipt' => 'Example Receipt',
-		                          'secure' => 'false'
+		                          'secure' => 'false',
+		                          'created_response' => 'created now'
 					        ]); 
 		 // Add the seeded records
 		DB::table('stamp_transactions')->insert([
@@ -28,7 +29,8 @@ class StampTransactionsTableSeeder extends Seeder {
 		                          'user_name' => 'Karen Parry',
 		                          'stamp_id' => 'DEV-STAMP-B',
 		                          'receipt' => 'Example Receipt',
-		                          'secure' => 'false'
+		                          'secure' => 'false',
+		                          'created_response' => 'created now'
 					        ]); 
 
 	}

@@ -9,7 +9,7 @@
 		            <span class="icon-bar"></span>
           		</button>
           		<a class="navbar-brand img-responsive" href="index.php">
-              		<img src="images/zaprri/zaprriWhite.png" height="50px" alt="logo">
+              		{{ HTML::image("images/zaprri/zaprriWhite.png", 'Zaprri Web Solutions Logo', ['height' => 50] ) }}
           		</a>
         	</div>
 	        <div class="navbar-collapse collapse">
