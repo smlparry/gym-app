@@ -33,11 +33,13 @@
 				    	</tr>
 				    	<tr>
 					      <td>Last Checked In</td>
-					      <td>{{ $specificUser->name }}</td>
+					      <td>{{ array_last($userHistory, function($key, $value) {
+					      		echo $value->created_response;
+					      		}) }}</td>
 				    	</tr>
 				    	<tr>
 					      <td>Total Checked In</td>
-					      <td>{{ $specificUser->name }}</td>
+					      <td>{{ count($userHistory) }}</td>
 				    	</tr>
 				    </tbody>
 				</table>
@@ -49,7 +51,8 @@
 			@foreach ( $userHistory as $historyItem )
 				<div class="box-wrap" style="margin-bottom:15px">
 					<div class="dashboard-item">
-						{{ $historyItem->created_response }} <span class="pull-right">{{ User::find($historyItem->stamp_user_id)->gym }}</span>
+						{{ $historyItem->created_response }} 
+						<span class="pull-right">{{ User::find($historyItem->stamp_user_id)->gym }}</span>
 					</div>
 				</div>
 			@endforeach 
