@@ -5,8 +5,8 @@
         <title>Stamp Screen</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
-    <body style="min-height: 480px; background-color: rgb(255, 255, 255);">
-       <canvas id="canvas" style="-webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none; width: 100%; height: 100%; background-image: url(images/stamp.gif); background-color: rgb(255, 255, 255);" width="1440" height="805"></canvas>
+    <body style="min-height: 480px; background-color: #27ae60;">
+       <canvas id="canvas" style="-webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none; width: 1440px; height: 805px; background-image: url(images/stamp.gif); background-color: rgb(255, 255, 255);" width="1440" height="805"></canvas>
     </body>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
