@@ -9,10 +9,10 @@
        <div id="background" style="width:1000px; height:2000px; background-color: blue;"></div><!--Replace this div with whatever you want-->
     </body>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="touchy.js"></script>
-    <script type="text/javascript" src="sss.client.js"></script>
-<script type="text/javascript" src="sss.util.js"></script>
-<script type="text/javascript" src="jquery.json-2.4.min.js"></script>
+    <script type="text/javascript" src="js/touchy.js"></script>
+    <script type="text/javascript" src="js/sss.client.js"></script>
+<script type="text/javascript" src="js/sss.util.js"></script>
+<script type="text/javascript" src="js/jquery.json-2.4.min.js"></script>
 <script>
 var body = document.getElementsByTagName("body")[0];
 var errorStart;
