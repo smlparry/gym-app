@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body style="background:#ff755a;">
-        <div id="background"></div><!--Replace this div with whatever you want-->
+       <div id="background" style="width:1000px; height:2000px; background-color: blue;"></div><!--Replace this div with whatever you want-->
     </body>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="touchy.js"></script>
