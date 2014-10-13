@@ -5,14 +5,16 @@
         <title>Stamp Screen</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
-    <body style="background: url(images/stamp.gif) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;">
-       <div id="background" style="height:100%;width:100%;"></div><!--Replace this div with whatever you want-->
+    <body>
+       <div id="background" style="background:url(images/stamp.gif) center no-repeat;width:100%;
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;" ></div><!--Replace this div with whatever you want-->
     </body>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
     <script type="text/javascript" src="js/touchy.js"></script>
     <script type="text/javascript" src="js/sss.client.js"></script>
 <script type="text/javascript" src="js/sss.util.js"></script>
