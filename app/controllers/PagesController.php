@@ -22,7 +22,7 @@ class PagesController extends BaseController {
 	public function style() {
 
 		// Just a simple page to style a random page
-		return View::make('stamp.success');
+		return View::make('stamp.test');
 
 	}
 

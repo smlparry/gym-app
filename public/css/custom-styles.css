@@ -14,7 +14,7 @@
 	border: 1px solid #dadada;
 	border-top: 1px solid #dadada;
 	background: #fff;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
@@ -220,4 +220,32 @@ h1.dashboard-heading {
 a:hover .box-wrap{
 	background: #F7F7F7;
 	color: #000;
+}
+
+.box-wrap .add-new-button {
+	padding: 15px;
+	text-align: center;
+	text-transform: uppercase;
+	background: #FF8E78;
+	color: #fff;
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	-ms-border-radius: 9px;
+	-o-border-radius: 9px;
+	border-radius: 9px;
+	transition: all .2s;
+
+}
+
+.box-wrap .add-new-button:hover {
+	background: #ff755a;
+	color: #fff;
+	transition: all .2s;
+}
+
+.dashboard-item input {
+	padding: 25px 15px;
+	font-size: 18px;
+	border: 1px solid #e9e9e9;
+	margin: 10px 0px
 }

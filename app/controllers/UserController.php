@@ -30,14 +30,9 @@ class UserController extends \BaseController {
 	 */
 	public function create()
 	{
-		// Check if the user is logged in
-		if ( Auth::check() )
-		{
-			return User::loggedInRedirect('/');
-		}
+		// Show a form to create a new user if they are a admin
 
-		// else show register page
-		return View::make('user.register');
+		return View::make("logged_in.user_create");
 	}
 
 
@@ -138,6 +133,7 @@ class UserController extends \BaseController {
 	public function update($id)
 	{
 		//
+		return dd(User::find($id));
 	}
 
 

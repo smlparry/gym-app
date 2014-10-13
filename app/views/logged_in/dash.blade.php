@@ -10,8 +10,9 @@
 @section('content')
 	
 	<div class="col-sm-8">
+		<h1 class="dashboard-heading">Check In Feed:</h1>
 		@foreach ( $history as $historyItem )
-			<div class="box-wrap" style="margin-bottom:15px">
+			<div class="box-wrap">
 				<div class="dashboard-item">
 					{{ $historyItem->user_name }} <span class="pull-right">{{ $historyItem->created_response }}</span>
 				</div>
