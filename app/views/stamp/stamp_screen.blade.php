@@ -5,8 +5,12 @@
         <title>Stamp Screen</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
-    <body style="background:#ff755a;">
-       <div id="background"></div><!--Replace this div with whatever you want-->
+    <body style="background: url(images/stamp.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+       <div id="background" style="height:100%;width:100%;"></div><!--Replace this div with whatever you want-->
     </body>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/touchy.js"></script>
