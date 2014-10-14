@@ -4,18 +4,11 @@
     <head>
         <title>Stamp Screen</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <style type="text/css">
-        .full-height { 
-    width:100%;
-    background-image: url('images/stamp_bg.jpg');
-    background-size: cover;
-    }</style>
     </head>
-   <body style=" background-color: #ff755a;">
-
-        
-        <div class="full-height" id="background"></div>
-
+   <body style="background-color: #ff755a;">
+      <div class="full-height">
+         <img src="images/stamp_bg.jpg" style="height:100%;width=100%;position:absolute;"></img>
+      </div>
     </body>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
@@ -28,9 +21,13 @@
 function resizeWindow(e) {
     // Get window height
     var windowHeight = $(window).height();
+    var windowWidth = $(window).width();
+    console.log(windowWidth);
     // Check if window height is larger than your required minimum height
         // Set selector min-height to the window height
-        $('.full-height').css('height', windowHeight);
+        $('.full-height').css('max-height', windowHeight);
+        $('.full-height').css('max-width', windowWidth);
+
 }
 
 // Set height on load
