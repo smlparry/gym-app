@@ -12,7 +12,7 @@
     background-size: 100%;
 }</style>
     </head>
-   <body style="min-height: 480px; background-color: rgb(255, 255, 255);">
+   <body style="min-height: 480px; background-color: #27ae60;">
 
         
         <canvas id="canvas" style="-webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none; background-image: url(http://beta.snowshoestamp.com/static/api/img/stamp.gif); background-color: rgb(255, 255, 255);"></canvas>
