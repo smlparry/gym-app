@@ -5,17 +5,16 @@
         <title>Stamp Screen</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <style type="text/css">
-        #canvas {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: 100%;
-}</style>
+        .full-height { 
+    width:100%;
+    background-image: url('images/stamp_bg.jpg');
+    background-size: cover;
+    }</style>
     </head>
-   <body style="min-height: 480px; background-color: #27ae60;">
+   <body style=" background-color: #ff755a;">
 
         
-        <canvas id="canvas" style="-webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none; background-image: url(http://beta.snowshoestamp.com/static/api/img/stamp.gif); background-color: rgb(255, 255, 255);"></canvas>
+        <div class="full-height" id="background"></div>
 
     </body>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -25,19 +24,21 @@
 <script type="text/javascript" src="js/sss.util.js"></script>
 <script type="text/javascript" src="js/jquery.json-2.4.min.js"></script>
 <script>
-$(document).ready(function(){
-resizeDiv();
-});
+// Set container min-height function
+function resizeWindow(e) {
+    // Get window height
+    var windowHeight = $(window).height();
+    // Check if window height is larger than your required minimum height
+        // Set selector min-height to the window height
+        $('.full-height').css('height', windowHeight);
+}
 
-  window.onresize = function(event) {
-  resizeDiv();
-  }
+// Set height on load
+resizeWindow();
 
-  function resizeDiv() {
-  vpw = $(window).width();
-  vph = $(window).height();
-  $("#canvas").css({'height': vph + 'px'});
-  }
+// Update height on window resize
+$(window).bind('resize', resizeWindow);
+
 
 var body = document.getElementsByTagName("body")[0];
 var errorStart;
