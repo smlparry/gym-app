@@ -5,9 +5,9 @@
         <title>Stamp Screen</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
-   <body style="background-color: #ff755a;">
+   <body id="full-height" style="background-color: #ff755a;">
       <div class="full-height">
-         <img src="images/stamp_bg.jpg" style="height:100%;width=100%;position:absolute;"></img>
+         <img id="background" src="images/stamp_bg.jpg" style="height:100%;width=100%;position:absolute;"></img>
       </div>
     </body>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
