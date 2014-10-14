@@ -4,9 +4,19 @@
     <head>
         <title>Stamp Screen</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+        #canvas {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 100%;
+}</style>
     </head>
-    <body style="min-height: 480px; background-color: #27ae60;">
-       <canvas id="canvas" style="-webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none; width: 1440px; height: 805px; background-image: url(images/stamp.gif); background-color: rgb(255, 255, 255);" width="1440" height="805"></canvas>
+   <body style="min-height: 480px; background-color: rgb(255, 255, 255);">
+
+        
+        <canvas id="canvas" style="-webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); touch-action: none; background-image: url(http://beta.snowshoestamp.com/static/api/img/stamp.gif); background-color: rgb(255, 255, 255);"></canvas>
+
     </body>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
@@ -15,6 +25,20 @@
 <script type="text/javascript" src="js/sss.util.js"></script>
 <script type="text/javascript" src="js/jquery.json-2.4.min.js"></script>
 <script>
+$(document).ready(function(){
+resizeDiv();
+});
+
+  window.onresize = function(event) {
+  resizeDiv();
+  }
+
+  function resizeDiv() {
+  vpw = $(window).width();
+  vph = $(window).height();
+  $("#canvas").css({'height': vph + 'px'});
+  }
+
 var body = document.getElementsByTagName("body")[0];
 var errorStart;
 var errorTime = 0;
