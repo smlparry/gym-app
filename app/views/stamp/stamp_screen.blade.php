@@ -2,11 +2,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Stamp Screen</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
    <body id="full-height" style="background-color: #ff755a;">
-      <div class="full-height">
+      <div id="full-height">
          <img id="background" src="images/stamp_bg.jpg" style="height:100%;width=100%;position:absolute;"></img>
       </div>
     </body>
@@ -25,8 +26,8 @@ function resizeWindow(e) {
     console.log(windowWidth);
     // Check if window height is larger than your required minimum height
         // Set selector min-height to the window height
-        $('.full-height').css('max-height', windowHeight);
-        $('.full-height').css('max-width', windowWidth);
+        $('#full-height').css('height', windowHeight);
+        $('#full-height').css('width', windowWidth);
 
 }
 
