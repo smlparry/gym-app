@@ -46,6 +46,17 @@
 
 		    // Add the placeholder with 
 		    $('.dataTables_filter input').attr("placeholder", "Search Records");
+
+		    $( "#dataTable_search_input" ).focus(function() {
+		    	// Hide the footer so that they can type easier on mobile.
+		    	$('#footer').hide();
+			});
+
+			$( "#dataTable_search_input" ).blur(function() {
+				// Enable the footer again
+				$('#footer').show();
+			});
+
 		});
 
 	</script>

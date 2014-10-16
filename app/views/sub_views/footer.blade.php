@@ -1,5 +1,5 @@
 
-<div class="footer navbar-fixed-bottom">
+<div id="footer" class="footer navbar-fixed-bottom">
 	<ul class="nav nav-pills dash-sidebar">
 			<li {{ Request::is('*/') ? 'class="active"' : '' }}>
 				<a href="/">
