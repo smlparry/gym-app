@@ -101,6 +101,7 @@
 		    	 "bInfo" : false,
 		    	 "bFilter" : false,
 		    });
+
 		});
 	</script>
 @stop
