@@ -8,37 +8,47 @@
 @stop
 
 @section('content')
-	
-	<div class="col-sm-8">
-		<h1 class="dashboard-heading">Check In Feed:</h1>
+
+		<!-- <h1 class="dashboard-heading">Check In Feed:</h1> -->
 		<div class="table-wrapper">
 			<table id="data_table" class="display">
 			    <thead>
 			        <tr>
 			            <th>Name</th>
-			            <th>Email</th>
-			            <th>Check In Time</th>
+			            <th>Checked In At</th>
 			        </tr>
 			    </thead>
 			    <tbody>
-			        <tr>
-			            <td>Row 1 Data 1</td>
-			            <td>Row 1 Data 2</td>
-			            <td></td>
-			        </tr>
-			        <tr>
-			            <td>Row 2 Data 1</td>
-			            <td>Row 2 Data 2</td>
-			            <td></td>
-			        </tr>
+			    	@foreach ( $history as $historyItem )
+				    	 <tr>
+				            <td>{{ $historyItem->user_name }}</td>
+				            <td>{{ $historyItem->created_response }}</td>
+				        </tr>	
+			    	@endforeach 	 
 			    </tbody>
 			</table>
 		</div>
+@stop
 
+@section('footer')
+	@include('sub_views.footer')
 @stop
 
 @section('jscript')
-	@include('js.datatables_init')
+	<script>
+
+		$(document).ready(function(){
+		    $('#data_table').DataTable({
+		    	 "oLanguage": { "sSearch": "" },
+		    	 "bInfo" : false,
+		    	 "iDisplayLength": 25
+		    });
+
+		    // Add the placeholder with 
+		    $('.dataTables_filter input').attr("placeholder", "Search Records");
+		});
+
+	</script>
 @stop
 
 

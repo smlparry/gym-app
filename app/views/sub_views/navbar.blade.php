@@ -8,8 +8,8 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
           		</button>
-          		<a class="navbar-brand img-responsive" href="/">
-              		{{ HTML::image("images/zaprri/zaprriWhite.png", 'Zaprri Web Solutions Logo', ['height' => 50] ) }}
+          		<a class="navbar-brand" href="/">
+              		{{ HTML::image("images/zaprri/zaprriWhite.png", 'Zaprri Web Solutions Logo' ) }}
           		</a>
         	</div>
 	        <div class="navbar-collapse collapse">

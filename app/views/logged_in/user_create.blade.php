@@ -104,3 +104,6 @@
 	</div>
 
 @stop
+@section('footer')
+	@include('sub_views.footer')
+@stop

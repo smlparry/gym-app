@@ -1,13 +1,13 @@
-	<div class="col-sm-4">
-		<ul class="nav nav-pills nav-stacked dash-sidebar">
+	<div class="col-sm-12" style="text-align:center;">
+		<ul class="nav nav-pills dash-sidebar">
 			<li {{ Request::is('*/') ? 'class="active"' : '' }}>
 				<a href="/">
-					Dashboard <span class="pull-right"><i class="fa fa-chevron-right"></i></span>
+					Dashboard
 				</a>
 			</li>
 			<li {{ Request::is('*users') ? 'class="active"' : '' }}>
 				{{ HTML::decode(
-					HTML::linkRoute('users.index', 'Users <span class="pull-right"><i class="fa fa-chevron-right"></i></span>')
+					HTML::linkRoute('users.index', 'Users')
 					)
 				}}
 					
@@ -15,7 +15,7 @@
 			</li>
 			<li>
 				{{ HTML::decode( 
-					HTML::linkRoute('stampScreen', 'Add New Stamp <span class="pull-right"><i class="fa fa-plus"></i></span>') 
+					HTML::linkRoute('stampScreen', 'Add Stamp') 
 					) }}
 			</li>
 		</ul>
