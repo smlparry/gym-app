@@ -11,16 +11,34 @@
 	
 	<div class="col-sm-8">
 		<h1 class="dashboard-heading">Check In Feed:</h1>
-		@foreach ( $history as $historyItem )
-			<div class="box-wrap">
-				<div class="dashboard-item">
-					{{ $historyItem->user_name }} <span class="pull-right">{{ $historyItem->created_response }}</span>
-				</div>
-			</div>
-		@endforeach 
+		<div class="table-wrapper">
+			<table id="data_table" class="display">
+			    <thead>
+			        <tr>
+			            <th>Name</th>
+			            <th>Email</th>
+			            <th>Check In Time</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr>
+			            <td>Row 1 Data 1</td>
+			            <td>Row 1 Data 2</td>
+			            <td></td>
+			        </tr>
+			        <tr>
+			            <td>Row 2 Data 1</td>
+			            <td>Row 2 Data 2</td>
+			            <td></td>
+			        </tr>
+			    </tbody>
+			</table>
+		</div>
 
-	</div>
+@stop
 
+@section('jscript')
+	@include('js.datatables_init')
 @stop
 
 

@@ -1,0 +1,7 @@
+<script>
+
+	$(document).ready(function(){
+	    $('#data_table').DataTable();
+	});
+
+</script>

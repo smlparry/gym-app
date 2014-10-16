@@ -17,6 +17,7 @@ class CreateStampUsersTable extends Migration {
 			$table->increments('id');
 			$table->integer('stamp_user_id');
 			$table->string('stamp_id');
+			$table->string('created_response');
 			$table->timestamps();
 		});
 	}
