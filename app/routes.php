@@ -11,6 +11,8 @@ Route::resource('login', 'SessionsController');
 // UsersController controls new user creation and other functions (i.e. forgot password)
 Route::resource('users', 'UserController');
 Route::get('forgot-password', ['as' => 'forgotPassword', 'uses' => 'UserController@forgotPassword'] );
+Route::get('register', ['as' => 'register', 'uses' => 'UserController@create']);
+
 
 // Stamp screens
 Route::get('s/', ['as' => 'stampScreen', 'uses' => 'StampController@stampScreen'] );

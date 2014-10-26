@@ -23,7 +23,7 @@ class PagesController extends BaseController {
 		}
 		
 		// Else redirect to index page
-		return View::make('index');
+		return View::make('logged_out.index');
 
 
 	}
