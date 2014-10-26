@@ -9,7 +9,7 @@ class StampController extends \BaseController {
 		// Set app key
 		$appKey = "d0a4e3f2fdafb449594a";
 		// Make the snow shoe stamp screen
-		return View::make("stamp.stamp_screen");
+		return header("Location: https://beta.snowshoestamp.com/applications/client/" . $appKey . "/");
 
 	}
 
